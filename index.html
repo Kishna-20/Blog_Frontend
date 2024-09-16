@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog SPA</title>
+    <style>
+        /* Basic Reset*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            padding: 10px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .nav.dark-mode {
+            background-color: #222;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 1em;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            font-stretch: ultra-expanded;
+        }
+
+        h3 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        /* Blog Post Grid */
+        .post-grid {
+            display: flex;
+            gap: 20px;
+        }
+
+        img{
+            display: block;
+            width: 700px;
+            height: 200px;
+            justify-content: space-between;
+        }
+
+        .date{
+            color: purple;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        p{
+            font-size: 0.8em;
+            text-align: left;
+            margin-bottom: 7px;
+        }
+        h4{
+            text-align: center;
+            margin: 5px;
+        }
+
+        footer {
+            padding: 2em;
+            text-align: center;
+            display: flex;
+        }
+
+        footer a {
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 778px) {
+            h1{
+                font-size: 3em;
+            }
+            nav  {
+                flex-direction: column;
+            }
+
+            div .post-grid{
+                flex-direction: column;
+            }
+            .post-grid img{
+                width: 500px;
+                height: 150px;
+            }
+            
+        } 
+
+        @media (max-width: 478px) {
+            h1{
+                font-size: 2em;
+            }
+            nav  {
+                flex-direction: column;
+            }
+
+            div .post-grid{
+                flex-direction: column;
+            }
+            .post-grid img{
+                width: 300px;
+                height: 75px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Kishna Solanki</div>
+        <ul class="nav-links">
+            <li>Blog</li>
+            <li>Projects</li>
+            <li>About</li>
+            <li>Newsletter</li>
+        </ul>
+        <div class="theme-switch">
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle">Dark/Light</label>
+        </div>
+    </nav>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <hr>
+        <h1>THE BLOG</h1>
+        <hr>
+        <div class="recent-posts">
+            <h3>Recent Blog Posts</h3>
+            <div class="post-grid">
+                <div>
+                    <img src=".\ux.png" alt="UX Blog">
+                    <p class="date">Oliviya Rhye 1 Jan 2022</p>
+                    <h4>UX review presentstions</h4>
+                    <p>How do you compelling presentations that wow your colleagues and impress you manager?</p>
+                </div>
+                <div>
+                    <img src=".\mitigating.png" alt="Mitigating Blog">
+                    <p class="date">Pheonix Baker 1 Jan 2023</p>
+                    <h4>Mitigating to Linear 101</h4>
+                    <p>Linear help streaming software projects, sprints, tasks, and bug tracking.</p>
+                </div>
+            </div>   
+            <div class="post-grid">
+                <div>
+                    <img src=".\building.png" alt="Builging Blog">
+                    <p class="date">Lana Steiner 18 Jan 2022</p>
+                    <h4>Building your API Stack</h4>
+                    <p>The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.</p>
+                </div>
+                <div>
+                    <img src=".\climate.png" alt="Climate Blog">
+                    <p class="date">Oliviya Rhye 1 Jan 2023</p>
+                    <h4>Grid system for better Design User Interface</h4>
+                    <p>A grid system is a design tool used to strange content on a weightage.It is a series of vertical and horizontal lines that create a matrix...</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <hr>
+        <div class="all-posts">
+            <h3>All Blog Posts</h3>
+            <div class="post-grid">
+                <div>
+                    <img src=".\ux.png" alt="UX Blog">
+                    <p class="date">Oliviya Rhye 1 Jan 2022</p>
+                    <h4>UX review presentstions</h4>
+                    <p>How do you compelling presentations that wow your colleagues and impress you manager?</p>
+                </div>
+                <div>
+                    <img src=".\climate.png" alt="Climate Blog">
+                    <p class="date">Oliviya Rhye 1 Jan 2023</p>
+                    <h4>Grid system for better Design User Interface</h4>
+                    <p>A grid system is a design tool used to strange content on a weightage.It is a series of vertical and horizontal lines that create a matrix...</p>
+                </div>
+            </div>
+            <div class="post-grid">
+                <div>
+                    <img src=".\mitigating.png" alt="Mitigating Blog">
+                    <p class="date">Pheonix Baker 1 Jan 2023</p>
+                    <h4>Mitigating to Linear 101</h4>
+                    <p>Linear help streaming software projects, sprints, tasks, and bug tracking.</p>
+                </div>
+                <div>
+                    <img src=".\building.png" alt="Builging Blog">
+                    <p class="date">Lana Steiner 18 Jan 2022</p>
+                    <h4>Building your API Stack</h4>
+                    <p>The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.</p>
+                </div>
+            </div>
+            <div class="post-grid">
+                <div>
+                    <img src=".\building.png" alt="Builging Blog">
+                    <p class="date">Lana Steiner 18 Jan 2022</p>
+                    <h4>Building your API Stack</h4>
+                    <p>The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.</p>
+                </div>
+                <div>
+                    <img src=".\ux.png" alt="UX Blog">
+                    <p class="date">Oliviya Rhye 1 Jan 2022</p>
+                    <h4>UX review presentstions</h4>
+                    <p>How do you compelling presentations that wow your colleagues and impress you manager?</p>
+                </div>
+            </div>  
+            
+        </div>
+    </section>
+
+    
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>Connect with us:
+        <a href="#">Twitter</a> | <a href="#">LinkedIn</a> | <a href="mailto:someone@example.com">Email</a> | <a href="#">RSS Feed</a>
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+
+            themeToggle.addEventListener("change", () => {
+                document.body.classList.toggle("dark-mode");
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+</body>
+</html>
